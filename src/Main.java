@@ -160,8 +160,7 @@ public class Main {
         int contribution = 29000;
 
         for (int i = 1; i <= 12; i++) {
-            total = total + total/100;
-            total = total + contribution;
+            total = total + total/100 + contribution;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
         }
 
