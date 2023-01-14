@@ -98,7 +98,7 @@ public class Main {
     public static void task6() {
         System.out.println("Задача 6");
 
-        for (int i = 7; i <= 98; i = i + 7) {
+        for (int i = 7; i <= 98; i += 7) {
             System.out.print(i + " ");
         }
         System.out.println();
@@ -114,13 +114,13 @@ public class Main {
     public static void task7() {
         System.out.println("Задача 7");
 
-        for (int i = 0; i <= 9; i = i + 1) {
+        for (int i = 0; i <= 9; i += 1) {
             System.out.print((int)Math.pow(2,i) + " ");
         }
 
         System.out.println();
 
-        for (int i = 1; i <= 512; i = i*2) {
+        for (int i = 1; i <= 512; i *= 2) {
             System.out.print(i + " ");
         }
 
@@ -139,9 +139,9 @@ public class Main {
         int total = 0;
         int contribution = 29000;
 
-        for (int i = 1; i <= 12; i++) {
-            total = total + contribution;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
+        for (int month = 1; month <= 12; month++) {
+            total += contribution;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
 
         System.out.println();
@@ -156,12 +156,14 @@ public class Main {
     public static void task9() {
         System.out.println("Задача 9");
 
-        int total = 0;
-        int contribution = 29000;
+        double total = 0;
+        double contribution = 29000;
+        double percent = 0.01;
 
-        for (int i = 1; i <= 12; i++) {
-            total = total + total/100 + contribution;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
+        for (int month = 1; month <= 12; month++) {
+            total += total*percent + contribution;
+            //System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей%n", month, total);
         }
 
         System.out.println();
